@@ -15,7 +15,16 @@ function contains(cell) {
   return arrStr.includes(cell);
 }
 
-const printCell = (cell, state) => {};
+
+const printCell = (cell, state) => {
+  let alive = contains.call(state, cell);
+  if (alive) {
+    return '\u25A3';
+  }
+  return '\u25A2';
+  
+};
+
 
 const corners = (state = []) => {};
 
