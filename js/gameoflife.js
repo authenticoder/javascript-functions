@@ -2,53 +2,14 @@ function seed(...args) {
   return args;
 }
 
-function same([x, y], [j, k]) {
-  // let a = arguments[0];
-  // let b = arguments[1];
-  // return JSON.stringify(a) === JSON.stringify(b);
-  return x === j && y === k;
-}
+function same([x, y], [j, k]) {}
 
 // The game state to search for `cell` is passed as the `this` value of the function.
-function contains(cell) {
-  let gameState = JSON.stringify(this);
-  return gameState.includes(cell);
-}
+function contains(cell) {}
 
-const printCell = (cell, state) => {
-  // let alive = contains.call(state, cell);
-  // if (alive) {
-  //   return '\u25A3';
-  // }
-  // return '\u25A2';
-  return contains.call(state, cell) ? "\u25A3" : "\u25A2";
-};
+const printCell = (cell, state) => {};
 
-const corners = (state = []) => {
-  if (state.length) {
-    // let [x, y] = [...state];
-
-    // const bottomLeftX = x[0];
-    // const bottomLeftY = x[1] - 1;
-    // const topRightX = y[0];
-    // const topRightY = y[1] + 1;
-
-    const bottomLeftX = Math.min(...state.map((item) => item[0]));
-    const bottomLeftY = Math.min(...state.map((item) => item[1]));
-    const topRightX = Math.max(...state.map((item) => item[0]));
-    const topRightY = Math.max(...state.map((item) => item[1]));
-
-    return {
-      topRight: [topRightX, topRightY],
-      bottomLeft: [bottomLeftX, bottomLeftY],
-    };
-  } else {
-    return {
-      topRight: [0, 0],
-      bottomLeft: [0, 0],
-    };
-  }
-};
+const corners = (state = []) => {};
 
 const printCells = (state) => {};
 
